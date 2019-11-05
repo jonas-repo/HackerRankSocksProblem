@@ -8,11 +8,18 @@ public class SocksApp {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		//https://www.hackerrank.com/challenges/sock-merchant/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup
+		//hacker rank input
 		int[] ar = {10,20,20,10,10,30,50,10,20};
+		
+		//object initialization
 		HashMap<Integer,Integer> hash = new HashMap<Integer,Integer>();
 		
+		//counters declaration
 		int count=0;
 		int sum=0;
+		
+		//process to fill the hash map by repeated values
 		for (int i = 0; i < ar.length; i++) {
 			for (int j = 0; j < ar.length; j++) 
 			{
@@ -25,6 +32,7 @@ public class SocksApp {
 			count=0;
 		}
 		
+		//process to get the pairs per values
 		for(Map.Entry<Integer,Integer> map : hash.entrySet())
 		{
 			if(map.getValue() > 1)
@@ -40,8 +48,8 @@ public class SocksApp {
 			}
 		}
 		
-		System.out.println(hash.toString());
-		System.out.println(sum/2);
+		System.out.println("Numbers repeated: "+hash.toString());
+		System.out.println("Pairs posibles:"+sum/2);
 		
 	}
 
